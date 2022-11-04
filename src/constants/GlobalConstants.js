@@ -1,5 +1,5 @@
 export const LOGIN_ENDPOINTS = {
-  LOGIN: '/ServletUsuarioLogin',
+  LOGIN: '/usuarios/login',
   SIGN_UP: '/ServletUsuarioRegister',
   EMAIL_CHECK: '/ServletVerificarEmail',
   USER_UPDATE: '/ServletActualizarDatosUsuario',

@@ -93,6 +93,10 @@ const LoginPage = () => {
     setValidation(emailValidation)
     if (emailValidation) {
       handleLoginAPI(userValue, values.password)
+        .then((data) => {
+          console.log(data)
+        })
+
     } else if (emailValidation) {
       setErrorMessage('Contraseña invalida')
     } else if (validation) {

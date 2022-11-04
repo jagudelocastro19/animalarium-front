@@ -3,7 +3,7 @@ import { LOGIN_ENDPOINTS } from '../constants/GlobalConstants';
 
 export const LoginAPI = {
     login: (user, password) => {
-        return apiInstance.get(LOGIN_ENDPOINTS.LOGIN, { params: { email: user, password: password } }).then(({ data }) => data);
+        return apiInstance.post(LOGIN_ENDPOINTS.LOGIN, { usuario: user, pass: password }).then(({ data }) => data);
     },
 }
 export const RegisterAPI = {
