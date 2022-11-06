@@ -6,7 +6,7 @@ export const LOGIN_ENDPOINTS = {
 };
 
 export const ITEMS_ENDPOINTS = {
-  ITEM_LIST: '/ServletListarArticulos',
+  ITEM_LIST: '/articulos',
   ITEM_REGISTER: '/ServletRegistrarArticulo',
   ITEM_REQUEST: '/ServletConsultarArticulo',
 };

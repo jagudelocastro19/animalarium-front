@@ -69,9 +69,10 @@ const CardAppleWatch = ({ data, login, parentCallback }) => {
   const [open, setOpen] = useState(false);
 
   const navigate = useNavigate();
-  const jsonTxt = data;
-  const txt = jsonTxt;
-  const articulo = JSON.parse(txt);
+  //const jsonTxt = data;
+  //const txt = jsonTxt;
+  //const articulo = JSON.parse(txt);
+  const articulo = data;
 
   const onTrigger = (lista) => {
     parentCallback(lista);
@@ -137,7 +138,8 @@ const CardAppleWatch = ({ data, login, parentCallback }) => {
                 <div style={ShopDetailsSubContainer}>
                   <h1>{currency(articulo.price)}</h1>
                   <div>
-                    <p><strong>ID: </strong>{articulo.id}</p>
+                    <p><strong>ID: </strong>{articulo._id}</p>
+                    <p><strong>Referencia: </strong>{articulo.referencia}</p>
                     <p><strong>Unidades Disponibles: </strong>{articulo.stock}</p>
                     <p><strong>Categoría: </strong>{articulo.categoria}</p>
                     <p><strong>Tipo Mascota: </strong>{articulo.typePet}</p>

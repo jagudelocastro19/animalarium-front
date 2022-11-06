@@ -165,7 +165,7 @@ const LoginPage = () => {
             <Typography variant='h5' sx={{ fontWeight: 600, marginBottom: 1.5 }}>
               Bienvenido!
             </Typography>
-            <Typography variant='body2'>Inicia sesisón para comenzar a comprar</Typography>
+            <Typography variant='body2'>Inicia sesión para comenzar a comprar</Typography>
           </Box>
           <form action="/" noValidate autoComplete='off' onSubmit={handleButtomLogin} >
             <TextField
@@ -203,7 +203,7 @@ const LoginPage = () => {
             <Box
               sx={{ mb: 1, display: 'flex', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'space-between' }}
             >
-              <FormControlLabel control={<Checkbox />} label='Remember Me' />
+              <FormControlLabel control={<Checkbox />} label='Recordarme' />
 
             </Box>
             <Button
@@ -213,7 +213,7 @@ const LoginPage = () => {
               sx={{ marginBottom: 2 }}
               type="submit"
             >
-              Login
+              Iniciar Sesión
             </Button>
             <Stack style={handleViewError(validation)} sx={{ mb: 2, width: '100%', alignItems: 'center' }} spacing={2}>
               <Alert severity="error">{errorMessage}</Alert>
@@ -224,7 +224,7 @@ const LoginPage = () => {
               </Typography>
               <Typography variant='body2'>
                 <Link to={"/RegisterPage"}>
-                  <LinkStyled>Crear una Cuenta</LinkStyled>
+                  <LinkStyled>Crea tu cuenta</LinkStyled>
                 </Link>
               </Typography>
             </Box>
