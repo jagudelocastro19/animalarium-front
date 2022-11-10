@@ -14,11 +14,15 @@ import MuiTab from '@mui/material/Tab'
 import AccountOutline from 'mdi-material-ui/AccountOutline'
 import LockOpenOutline from 'mdi-material-ui/LockOpenOutline'
 import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
+import PriceChange from '@mui/icons-material/PriceChange';
 
 // ** Demo Tabs Imports
 import TabAccount from './account-settings/TabAccount'
 import TabSecurity from './account-settings/TabSecurity'
 import TableBasic from './account-settings/TableBasic'
+import TabArticle from './account-settings/TabArticle'
+import TabNewArticle from './account-settings/TabNewArticle'
+
 
 // ** Third Party Styles Imports
 import 'react-datepicker/dist/react-datepicker.css'
@@ -89,6 +93,24 @@ const handleDeleteUser = () => {
               </Box>
             }
           />
+          <Tab
+            value='Articulos'
+            label={
+              <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                <PriceChange />
+                <TabName>Mis Articulos</TabName>
+              </Box>
+            }
+          />
+          <Tab
+            value='NArticulos'
+            label={
+              <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                <PriceChange />
+                <TabName>Crear Articulos</TabName>
+              </Box>
+            }
+          />
         </TabList>
 
         <TabPanel sx={{ p: 0 }} value='Perfil' index={0}>
@@ -99,6 +121,12 @@ const handleDeleteUser = () => {
         </TabPanel>
         <TabPanel sx={{ p: 2 }} value='Compras' index={2}>
           <TableBasic />
+        </TabPanel>
+        <TabPanel sx={{ p: 2 }} value='Articulos' index={2}>
+          <TabArticle />
+        </TabPanel>
+        <TabPanel sx={{ p: 2 }} value='NArticulos' index={2}>
+          <TabNewArticle />
         </TabPanel>
       </TabContext>
     </Card>
