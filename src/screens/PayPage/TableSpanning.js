@@ -8,7 +8,7 @@ import TableCell from '@mui/material/TableCell'
 import TableContainer from '@mui/material/TableContainer'
 
 const TableSpanning = ({carrito}) => {
-const TAX_RATE = 0.16
+const TAX_RATE = 0.19
 
 const ccyFormat = num => {
   return `${num.toFixed(2)}`
@@ -40,7 +40,7 @@ const invoiceTotal = invoiceTaxes + invoiceSubtotal
         <TableHead>
           <TableRow>
             <TableCell align='center' colSpan={3}>
-              Details
+              Detalle
             </TableCell>
             <TableCell align='right'>Precio</TableCell>
           </TableRow>
@@ -69,7 +69,7 @@ const invoiceTotal = invoiceTaxes + invoiceSubtotal
           </TableRow>
           <TableRow>
             <TableCell>IVA</TableCell>
-            <TableCell align='right'>{`${(TAX_RATE * 100).toFixed(0)} %`}</TableCell>
+            <TableCell align='right'>{`${(TAX_RATE * 100).toFixed(0)}%`}</TableCell>
             <TableCell align='right'>{ccyFormat(invoiceTaxes)}</TableCell>
           </TableRow>
           <TableRow>
